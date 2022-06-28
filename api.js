@@ -3,10 +3,20 @@
 const api_url = 'https://cat-fact.herokuapp.com/facts';
 
 async function getData() {
-    const response = await fetch(api_url);
-    const data = await response.json();
-    
-    console.log(data);
+  const response = await fetch(api_url);
+  const data = await response.json();
+// getting user data 
+
+
+console.log(data);
 }
 
 getData();
+
+function factNum() {
+    //gets value of user #
+    let userInputNum = document.getElementById('userNum').value;
+    
+    
+    
+    }

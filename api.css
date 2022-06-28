@@ -1,0 +1,13 @@
+#title {
+    text-align: center;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+  
+  .sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }

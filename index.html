@@ -4,19 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
   <title>API Wrapper</title>
-  <!-- <link rel="stylesheet" type="text/css" href="todo.css"> -->
-  <h1 id="todo">API Wrapper</h1>
+  <link rel="stylesheet" type="text/css" href="api.css">
+  <h1 id="title">API Wrapper</h1>
 </head>
 
 <body>
 <section class="sec">
+  <form>
+    <button type="button" onclick="letterC()">Cats make mor...</button>
+    <button type="button" onclick="letterM()">Most cats are...</button>
+    <button type="button" onclick="letterO()">Owning a cat c...</button>
+    <button type="button" onclick="letterWh()">When cats grim...</button>
+    <button type="button" onclick="letterWi()">Wikipedia has...</button>
+  </form>
+</section>
 
+<br>
+
+<section class="sec">
+  <form>
+    <input type="text" name="userinput" id="box2" placeholder="Write # of Facts" required>
+    <button type="button" id="userNum" onclick="factNum()">Submit</button>
+  </form>
+</section>
+
+<section>
+  <p id="buttonValue"></p>
+</section>
+
+<section>
+  <p id="numValue"></p>
 </section>
 
 
 
 <footer>
-  <p id="footer">API Wrapper for WizTivi by Miguel Lopez. ekimmai@outlook.com</p>
+  <p id="footer">API Wrapper for WizTivi by Miguel Lopez - ekimmai@outlook.com</p>
 </footer>
 
 <script src="api.js"></script>
