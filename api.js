@@ -1,10 +1,11 @@
 const api_url = 'https://cat-fact.herokuapp.com/facts';
 
-/*
+//first function endpoint connects to individual button and returns fact based on alphabetical order
+//main focus is using switch statement for button clicked
 async function getData(id) {
-//getting data from api and destructuring it to identify by index
 const response = await fetch(api_url);
 const data = await response.json();
+//getting data from api and destructuring it to identify by index 0-4
 const newArray = [...data];
 
 //variable for error message if needed
@@ -32,63 +33,26 @@ let errorMessage = "Not in the range!!!!!!!"
   }
 
 }
-*/
 
-//second function for number
+
+//second function for number of facts user wants
+//main focus is getting number of facts, iterating through that and assigning each request with random fact, using array index 0 - 4
 async function getData2() {
-  //getting data from api and destructuring it to identify by index
   const response = await fetch(api_url);
   const data = await response.json();
   const newArray = [...data];
   
-  //gets value of user # and gives error message if out of range
+// first variable gets value of user # and second provides error message if its out of range (range 0-20)
   let userInputNum = document.getElementById('userNum').value;
   let errorMessage = "Not in the range!!!"
-  //random fact for user
+  //random fact for user, using array index 0-4
   let randomChoice = Math.floor(Math.random() * 5);
  
   //below is for number of facts user wants
   
-  if (userInputNum >= 0 && userInputNum <= 20) {
-     //getData();
+  if (userInputNum > 0 && userInputNum <= 20) {
      document.getElementById("numValue" + userInputNum).innerHTML = newArray[randomChoice].text;
    } else {
-     document.getElementById("numValue").innerHTML = errorMessage;
+     alert(errorMessage);
   }
-  }
-
-
-/*async function twoFunc() {
-    const response = await fetch(api_url);
-    const data = await response.json();
-    const newArray = [...data];
-//twoFunc();
-document.getElementById("buttonValue").innerHTML = newArray[2].text;
-}*/
-
-
-//console.log(data);
-
-/*function factNum() {
-    //gets value of user #
-  let userInputNum = document.getElementById('userNum').value;
-    //sets error message if value not in the range
-  let errMessage = "Not in the range!!!"
-
-  if (userInputNum >= 1 && userInputNum <= 20) {
-      getData();
-      
-      document.getElementById("numValue").innerHTML = newArray[userInputNum];
-    } else {
-      document.getElementById("numValue").innerHTML = errMessage;
-    }
-}*/
-/*
-console.log(newArray[0].text);
-console.log(newArray[1].text);
-console.log(newArray[2].text);
-console.log(newArray[3].text);
-console.log(newArray[4].text);
-*/
-
-//getData();
+}
