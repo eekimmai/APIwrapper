@@ -14,7 +14,6 @@ let errorMessage = "Not in the range!!!!!!!"
   switch(id){
       case "1":
           document.getElementById("buttonValue").innerHTML = newArray[2].text;
-          console.log("it is working");
           break;
       case "2":
           document.getElementById("buttonValue").innerHTML = newArray[3].text;
@@ -42,17 +41,41 @@ async function getData2() {
   const data = await response.json();
   const newArray = [...data];
   
-// first variable gets value of user # and second provides error message if its out of range (range 0-20)
+  // first variable gets value of user # and second provides error message if its out of range (range 0-20)
   let userInputNum = document.getElementById('userNum').value;
   let errorMessage = "Not in the range!!!"
   //random fact for user, using array index 0-4
   let randomChoice = Math.floor(Math.random() * 5);
- 
-  //below is for number of facts user wants
+  //outputting random fact
+  let chosenFact = newArray[randomChoice].text;
+
   
-  if (userInputNum > 0 && userInputNum <= 20) {
-     document.getElementById("numValue" + userInputNum).innerHTML = newArray[randomChoice].text;
-   } else {
-     alert(errorMessage);
-  }
+  
+  //loop
+    if (userInputNum > 0 && userInputNum <= 20) {
+    document.getElementById("numValue").innerHTML = chosenFact;
+    } else {
+      alert(errorMessage);
+    }
+    
 }
+
+
+/*
+
+    () => {
+      //create a new div element
+      const factDiv = document.createElement('div');
+      factDiv.classList.add("fact");
+      //create li
+      const newFact = document.createElement('li');
+      //output div to ul in html
+      newFact.classList.add('fact-item');
+      factDiv.appendChild(newFact);
+      //adding new div to numList in HTML
+      const numList = getElementsByClassName('numList');
+      numList.appendChild(factDiv);
+      }
+
+  
+*/
