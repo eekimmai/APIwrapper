@@ -62,7 +62,8 @@ async function getData2() {
 
 
 /*
-
+Trying to create new element and assign it chosenFact variable then loop through it the number of times user wants
+If user wants 7 facts, it will loop 7 times and each element will have a random fact using randomChoice variable
     () => {
       //create a new div element
       const factDiv = document.createElement('div');
