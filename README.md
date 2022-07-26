@@ -11,8 +11,8 @@ This is a short exercise to demonstrate knowledge of working with functions and 
 
 There are two main features in this small application,
 
-*Ordering the number of Facts about Cats in Alphabetical Order, and displaying the resulting fact after clicking on the button
-*Putting in a random number of facts in the bar, >= 20, and it displays number of facts randomized
+* Ordering the number of Facts about Cats in Alphabetical Order, and displaying the resulting fact after clicking on the button
+* Putting in a random number of facts in the bar, >= 20, and it displays number of facts randomized
 
 ---
 
